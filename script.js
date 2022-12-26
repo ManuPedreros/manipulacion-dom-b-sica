@@ -6,6 +6,11 @@ const parrafito = document.querySelector('.parrafito');
 const pid = document.querySelector('#pid');
 //Tambien podemos usar document.getElementById... en cuyo caso no debemos incluir el # (identificardor del Id)
 const input = document.querySelector('input');
+//Para la sección de escuchando eventos creamos las variables necesarias y vinculamos con lo elementos de html que vamos a usar, todo esto se llama seleccionar los elementos
+const input1 = document.querySelector('#calculo1');
+const input2 = document.querySelector('#calculo2');
+const btnCalcular = document.querySelector('#btnCalcular');
+const pResult = document.querySelector('#result');
 
 console.log({
     h1,
@@ -41,4 +46,8 @@ img.setAttribute('width', '200px');
 pid.innerHTML = "";//Con esto borra el contenido del elemento e introducimos una cadena de texto vacia a un elemento
 pid.append(img);//Insertamos la imagen dentro de un elemento existente, append no borra el contenido del elemento sino que adiciona lo nuevo, appendChild es igual
 
-
+function btnOnClick() {
+    const sumaInputs = input1.value + input2.value;
+    pResult.innerHTML = "Resultado: " + sumaInputs;
+    //alert(input1.value + input2.value);
+}
