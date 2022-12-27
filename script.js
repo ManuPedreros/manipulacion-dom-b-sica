@@ -11,6 +11,8 @@ const input1 = document.querySelector('#calculo1');
 const input2 = document.querySelector('#calculo2');
 const btnCalcular = document.querySelector('#btnCalcular');
 const pResult = document.querySelector('#result');
+const form = document.querySelector('#form');
+
 
 console.log({
     h1,
@@ -46,10 +48,13 @@ img.setAttribute('width', '200px');
 pid.innerHTML = "";//Con esto borra el contenido del elemento e introducimos una cadena de texto vacia a un elemento
 pid.append(img);//Insertamos la imagen dentro de un elemento existente, append no borra el contenido del elemento sino que adiciona lo nuevo, appendChild es igual
 
-function btnOnClick() {
+
+function btnOnClick(event) {
+    console.log({event});
+    event.preventDefault();
     const sumaInputs = input1.value + input2.value;
     pResult.innerHTML = "Resultado: " + sumaInputs;
     //alert(input1.value + input2.value);
 }
 
-btnCalcular.addEventListener('click', btnOnClick);
+form.addEventListener('submit', btnOnClick);
