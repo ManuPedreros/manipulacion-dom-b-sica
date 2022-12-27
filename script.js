@@ -51,3 +51,5 @@ function btnOnClick() {
     pResult.innerHTML = "Resultado: " + sumaInputs;
     //alert(input1.value + input2.value);
 }
+
+btnCalcular.addEventListener('click', btnOnClick);
