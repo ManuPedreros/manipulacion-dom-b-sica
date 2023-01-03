@@ -48,7 +48,6 @@ img.setAttribute('width', '200px');
 pid.innerHTML = "";//Con esto borra el contenido del elemento e introducimos una cadena de texto vacia a un elemento
 pid.append(img);//Insertamos la imagen dentro de un elemento existente, append no borra el contenido del elemento sino que adiciona lo nuevo, appendChild es igual
 
-
 function btnOnClick(event) {
     console.log({event});
     event.preventDefault();
